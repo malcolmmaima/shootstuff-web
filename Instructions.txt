@@ -1,0 +1,31 @@
+<http://www.malcolmmaima.com>
+------------------------------
+Hey people, Malcolm Maima here.
+So a couple of things to note before playing the game:
+------------------------------------------------------
+1. This is a Demo Version of the game
+2. Please do report any bugs or errors you experience while
+   playing the game (http://www.malcolmmaima.com/contact-me)
+3. If playing the web version of the game, please not that you will be required
+   to download Unity Web player which is only 1MB in size before proceeding.
+
+How to play the Game
+-----------------------------------------------------
+> This is the PC/Web Version of the game, so controls will be
+  different;
+-----------------------------------------------------
+		> Use Mouse/Trackpad to shoot enemies
+		> Use Up + Down Keys to move the ship up/down
+		> Use Left + Right Keys to move player left/right
+
+-----------------------------------------------------
+> For Android phone users;
+-----------------------------------------------------
+                > Use left thumb to drag ship around the screen and evade enemy fire
+                > Tap screen with right thumb to fire at your enemies
+-----------------------------------------------------
+PS: I plan on finishing up the full game and upload it online for you guys so
+    some feedback on your gameplay would be awesome (^.^)
+
+	#CHEERS	
+-----------------------------------------------------

@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<!-- Hit me up at malcolmmaima@gmail.com : ) -->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="author" content="Malcolm Maima">
+		<meta name="description" content="Shootstuff is a simple strategy game by Malcolm Maima. You simply shoot stuff that shoots at you." />
+		<meta name="keywords" content="malcolm, maima, game development, gamedev, indie, game, developer, junior" />
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="1 month">
+		<title>Shootstuff</title>
+		<!-- indie, game, development -->
+
+		<title>Shoot stuff - Web</title>
+		<script type='text/javascript' src='jquery.min.js'></script>
+		<script type="text/javascript">
+		
+		<!--
+		var unityObjectUrl = "UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+			
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "web.unity3d");
+			});
+		-->
+		</script>
+		<style type="text/css">
+		<!--
+		body {
+			font-family: Helvetica, Verdana, Arial, sans-serif;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+		a:link, a:visited {
+			color: #bfbfbf;
+		}
+		a:active, a:hover {
+			color: #bfbfbf;
+		}
+		p.header {
+			font-size: small;
+		}
+		p.header span {
+			font-weight: bold;
+		}
+		p.footer {
+			font-size: x-small;
+		}
+		div.content {
+			margin: auto;
+			width: 960px;
+		}
+		div.fb-comments_main {
+			  border: inset thin;
+			  min-height: 300px;
+			  background-color: darkred;
+			  margin-left: 150px;
+			  margin-right: 150px;
+			  border-radius: 10px;
+			  min-width: 800px;
+		}
+		div.comments-top {
+			border: outset thin;
+  			border-radius: 5px;
+			margin-bottom: 5px;  
+			background-color: black;
+		}
+		div.download {
+			border: ridge thin;
+			margin: 5px;
+			height: 100%;
+			border-radius: 5px;
+			float: right;
+			background-color: whitesmoke;
+		}
+		div.download > div {
+			margin: 5px;
+			border: none;
+			float: right;
+		}
+		div.fb-plugin {
+		}
+		div.broken,
+		div.missing {
+			margin: auto;
+			position: relative;
+			top: 50%;
+			width: 193px;
+		}
+		div.broken a,
+		div.missing a {
+			height: 63px;
+			position: relative;
+			top: -31px;
+		}
+		div.broken img,
+		div.missing img {
+			border-width: 0px;
+		}
+		div.broken {
+			display: none;
+		}
+		div#unityPlayer {
+			cursor: default;
+			height: 600px;
+			width: 960px;
+		}
+		div#instagram {
+			margin-left: 50px;
+		}
+		div#tweets {
+			}
+		-->
+		</style>
+		
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+        
+
+<script type="text/javascript">stLight.options({publisher: "9f138a64-cbc1-440e-a97b-47787d162580", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+		
+	</head>
+	<body>
+	<!-- Begin Facebook SDK -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- End Facebook SDK -->
+
+		<p class="header"><span>Made with Love by <h4>< <a href="http://www.malcolmmaima.com" target="_blank"> Malcolm Maima </a> /> </h4></span></p>
+		<div class="content">
+			<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+            </div>
+			<div class="fb-comments_main">
+				<div class="comments-top"> 
+                    <p>Currently available on PC and Android only. <a href="Instructions.txt">How to Play</a></p>
+                  <div class="download">
+                	<div><a href="download/shoot-stuff-android.apk"><img src="Images/Android-SDK-Folder-Icon.png" width="100px" height="100px"/></a> 
+                    </div>
+                    <div><a href="download/Shoot-stuff-PC.zip"><img src="Images/PC-Icon.png" height="100px" width="100px"/></a>
+                    </div>
+			</div>
+				</div>
+                
+                <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+<span class='st_email_hcount' displayText='Email'></span>
+                
+            <div class="fb-plugin"><!-- <div class="fb-comments" data-href="http://shootstuff.malcolmmaima.com/" data-numposts="10" data-colorscheme="dark"></div> -->
+            
+                </div>
+                
+                <!-- Disqus Comments-->
+                <div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//malcolmmaima.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+                <!-- End Disqus Comments -->
+                
+                 <!-- Instagram <div id="instagram">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="4" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://instagram.com/p/0qJma8rrtq/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_top">Working on a 2D android game. Will be launching soon. Look out for it. Game background music courtesy of @eugenethedream #icodeHard</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by Malcolm Maima (@malcolmmiyare) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2015-03-25T17:11:30+00:00">Mar 25, 2015 at 10:11am PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+</div>
+             End Instagram -->
+            
+            <!-- Begin Twitter -->
+            <!--
+            <div id="tweets">
+            <a class="twitter-timeline" href="https://twitter.com/malcolmmaima" data-widget-id="321720978742841344">Tweets by @malcolmmaima</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <!-- End Twitter -->
+		</div> 
+		<p class="footer"> &copy <a href="http://www.malcolmmaima.com" title="Get in touch">Maima Game Dev</a> &raquo;</p>
+		
+		<!-- Share this scripts -->
+			<script type="text/javascript">stLight.options({publisher: "9f138a64-cbc1-440e-a97b-47787d162580", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+			<script>var options={ "publisher": "9f138a64-cbc1-440e-a97b-47787d162580", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "linkedin", "pinterest", "email", "sharethis"]}};
+			var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+			</script>
+		<!-- End of Share this scripts -->
+		
+		<!-- Google Analytics -->
+		<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-63802860-1', 'auto');
+  		ga('send', 'pageview');
+
+		</script>
+		
+		<!-- End Google Analytics -->
+		<script id="dsq-count-scr" src="//malcolmmaima.disqus.com/count.js" async></script>
+    
+    
+	</body>
+</html>
